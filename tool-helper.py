@@ -19,46 +19,9 @@ menu = 1
 io = 1
 see = 1
 i = 1
-#file = open("input.txt", encoding='utf-8')
+
 print("version - 1.0(Created Terror696)\n"+Fore.GREEN+"GitHub: https://github.com/Terror696\n[!] Я вам помогу выполнить ваши задачи быстрея\n"+Fore.MAGENTA+"[!] Мой киви (номер не мой!)'+380636010596'\n"+Fore.WHITE)
-#print("У вас уже есть профиль?")
-#inp  = 1
-#while inp == 1:
-#    start = input("y/n: ")
-#    inp = 0
-#    if start == "n":
-#        while True:
-#            subprocess.call("cls",shell=True)
-#            name = input("Введите ваше имя: ")
-#            year = input("Хорошо " + Fore.RED + name + Fore.WHITE + " cколько вам лет?: ")
-#            while io == 1:
-#                pol = input("Какой у вас пол 'м/ж':  ")
-#                if pol == "м":
-#                    pol = "Мужчина"
-#                    io = 0
-#                elif pol == "ж":
-#                    pol = "Женщина"
-#                    io = 0
-#                else:
-#                    subprocess.call("cls",shell=True)
-#                    print("Введить точный пол 'м/ж'")
-#            print("Создание профиля!")
-#            pro = open("profil.txt", "w+", encoding='utf-8')
-#            pro.write("Name: " + name + "\n" + "Year: " + year + "\n" + "Gender: " + pol)
-#            print(Fore.YELLOW + "Профиль успешно создан!")
-#            end = 1
-#            if end == 1:
-#                break
-#    elif start == "y":
-#        subprocess.call("cls",shell=True)
-#        print("Загрузка профиля!")
-#        pro = open("profil.txt", encoding='utf-8')
-#        print(pro.read())
-#        menu = 1
-#    else:
-#        subprocess.call("cls",shell=True)
-#        print("Ответ должен быть 'y/n'")
-#        inp = 1
+
 while menu == 1:
     print(Fore.GREEN + "[-] Меню управления!\n"+Fore.YELLOW+"[1]: Вход на сайт через прокси!\n[2]: Генератор почты!\n[3]: Отправить письмо на почту!\n[4]: Найти по NickNames!\n[5]: Узнать все ссылки на странице!\n[6]: Узнать id и стоимость инвентаря Steam!\n[0]: Выход"+Fore.WHITE)
     menu = 0
@@ -76,7 +39,7 @@ while menu == 1:
         prox.ssl_proxy = proxy
         capabilities = webdriver.DesiredCapabilities.CHROME
         prox.add_to_capabilities(capabilities)
-        driver = webdriver.Chrome('chromedriver.exe',desired_capabilities=capabilities)
+        driver = webdriver.Chrome(desired_capabilities=capabilities)
         driver.get(link)
         input()
         menu = 1
